@@ -30,6 +30,9 @@ def main():
             print event['summary']
             print event['description']
             print event['location']
+            print event['organizer']['displayName']
+            #for details in event['organizer']:
+            #    print details
             print '  '
         page_token = events.get('nextPageToken')
         if page_token:
