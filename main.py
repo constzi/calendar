@@ -1,7 +1,7 @@
 #http://amgcomputing.blogspot.com/2012/11/retrieving-google-calendar-events-with.html
 #http://stackoverflow.com/questions/22746733/how-to-authorize-installed-app-for-biqquery-with-google-oauth
 
-calendarId = 'constantinz@gmail.com'
+calendarId = '2trbf1v2edmbkrrlqcbblvfttdqjg9da@import.calendar.google.com'
 
 import google_calendar
 import pprint
@@ -10,10 +10,10 @@ def getEvents(pageToken=None):
     events = google_calendar.service.events().list(
         calendarId=calendarId,
         singleEvents=True,
-        maxResults=1,
+        maxResults=100,
         orderBy='startTime',
-        timeMin='2014-07-01T00:00:00-08:00',
-        timeMax='2014-07-15T00:00:00-08:00',
+        timeMin='2014-08-01T00:00:00-08:00',
+        timeMax='2014-08-30T00:00:00-08:00',
         pageToken=pageToken,
         ).execute()
     return events
@@ -28,6 +28,8 @@ def main():
             print event['start']
             print event['end']
             print event['summary']
+            print event['description']
+            print event['location']
             print '  '
         page_token = events.get('nextPageToken')
         if page_token:
