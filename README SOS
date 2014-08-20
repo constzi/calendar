@@ -1,0 +1,6 @@
+important links to figure out wtf to allow redirect_uri issue:
+
+https://github.com/parezcoydigo/myTasks/issues/5
+http://stackoverflow.com/questions/11485271/google-oauth-2-authorization-error-redirect-uri-mismatch
+http://google-api-python-client.googlecode.com/hg/static/Credentials.png
+https://console.developers.google.com/project/apps~wise-trainer-644/apiui/credential?authuser=0
